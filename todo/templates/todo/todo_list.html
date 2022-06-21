@@ -8,5 +8,19 @@
 </head>
 <body>
     <h1>Things I need to do</h1>
+
+    {% for item in items %}
+    <tr>
+        <td>
+            {{ item.name}}
+        </td>
+        <td>
+            {{ item.done}}
+        </td>
+    </tr>
+    {% empty %}
+    <tr><td>You have noting to do here</td></tr>
+    {% endfor %}
+    <a href = "/add">Add an Item</a>
 </body>
 </html>
