@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Document</title>
+    <title>Edit todo item</title>
 </head>
 <body>
-        <form method="POST" action="add">
+        <form method="POST">
             {% csrf_token %} 
             {{ form.as_p }}
 <!-- ensures this is coming from this form and validates it -->
 
             <div>
                 <p>
-                    <button type="submit">Add Item</button>
+                    <button type="submit">Update  Item</button>
                 </p>
             </div>
         </form>
